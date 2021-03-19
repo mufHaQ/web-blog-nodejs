@@ -1,0 +1,14 @@
+<%- include('../../templates/t_header') %>
+<div class="container my-4 rounded shadow c-item p-4">
+  <form class="d-flex">
+    <input class="form-control me-2 gen_input" type="generate" placeholder="generate" aria-label="Generate" disabled>
+    <div class="wrap_btn_gen">
+      <button class="btn btn-dark btn_gen" type="button">Generate</button>
+    </div>
+  </form>
+  <ul class="list-group mt-2">
+    
+  </ul>
+</div>
+<script src="/assets/js/apiGen/js.js?ver=<%= Date.now() %> "></script>
+<%- include('../../templates/t_footer') %>

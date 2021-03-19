@@ -1,0 +1,16 @@
+body {
+  height: 2000px;
+  background-color: rgb(231, 231, 231);
+}
+
+/* .c-item {
+  margin-left: -800px;
+} */
+
+.container .c-item {
+  background-color: white;
+}
+
+.list-group-item span {
+  font-size: 25px;
+}
