@@ -6,24 +6,46 @@ const {
   Schema
 } = mongoose
 
-const blogSchema = new Schema({
-  email: String,
-  username: String,
-  password: String,
-  ip: String
+// Users
+const userSchema = new Schema({
+  email: {
+    type: String,
+    required: true
+  },
+  username: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  }
 }, {
   timestamps: true
 })
-const blog = mongoose.model('blogs', blogSchema)
+const users = mongoose.model('users', userSchema)
 
 
 // apiGen
 const apiGenSchema = new Schema({
   key: String
+}, {
+  timestamps: true
 })
 const apiGen = mongoose.model('apiKeys', apiGenSchema)
 
+
+// Blog
+const blogSchema = new Schema({
+  imgName: String,
+  title: String,
+  content: String,
+}, {timestamps: true})
+const blog = mongoose.model('blogs', blogSchema)
+
+
 module.exports = {
-  blog,
-  apiGen
+  users,
+  apiGen,
+  blog
 }

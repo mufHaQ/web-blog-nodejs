@@ -14,3 +14,8 @@ body {
 .list-group-item span {
   font-size: 25px;
 }
+
+/* .c-text-items {
+  background: rgb(242, 242, 242);
+  background: linear-gradient(180deg, rgba(242, 242, 242, 0) 0%, rgba(171, 171, 171, 0.21612394957983194) 75%, rgba(0, 0, 0, 0.35898109243697474) 100%);
+} */

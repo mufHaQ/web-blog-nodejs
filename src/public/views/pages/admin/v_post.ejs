@@ -1,0 +1,37 @@
+<%- include('../../templates/t_header') %>
+<div class="container bg-light my-4 py-2 rounded shadow">
+  <h1>Post</h1>
+</div>
+<form action="/admin/post" method="POST" enctype="multipart/form-data">
+  <div class="container bg-light my-4 py-2 rounded shadow">
+    <div class="mb-3">
+      <h4>
+        <label for="inputTitle" class="form-label">Judul</label>
+      </h4>
+      <input type="text" class="form-control" id="inputTitle" name="title">
+    </div>
+  </div>
+  <div class="container bg-light my-4 py-2 rounded shadow">
+    <div class="mb-3">
+      <h4>
+        <label for="inputContent" class="form-label">Isi</label>
+      </h4>
+      <textarea class="form-control" id="inputContent" name="content"></textarea>
+    </div>
+  </div>
+  <div class="container bg-light my-4 py-2 rounded shadow">
+    <div class="mb-3">
+      <h4>
+        <label for="inputThumbnail" class="form-label">Gambar</label>
+      </h4>
+      <input type="file" class="form-control" id="inputThumbnail" accept="image/x-png,image/gif,image/jpeg" name="image">
+    </div>
+  </div>
+  <div class="container bg-light my-4 rounded shadow">
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary my-2 btn_post">Submit</button>
+    </div>
+  </div>
+</form>
+<script src="/assets/js/admin/post.js?ver=<%= Date.now() %> "></script>
+<%- include('../../templates/t_footer') %>

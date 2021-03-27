@@ -1,0 +1,21 @@
+<%- include('../../templates/t_header') %>
+<div class="container c-item shadow rounded my-4 py-2">
+  <h1>Admin</h1>
+</div>
+<div class="container p-0 mt-4">
+  <form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
+</div>
+<div class="container rounded py-2 p-0">
+  <ul class="list-group">
+    <% data.forEach(dat => { %>
+    <li class="list-group-item pt-3 pb-0">
+      <p class="float-start" style="font-size: 25px; display: inline-block;"><%= dat.title %></p>
+      <button type="button" class="btn btn-danger float-end" style="display: inline-block;">Delete</button>
+    </li>
+    <% }) %>
+  </ul>
+</div> 
+<%- include('../../templates/t_footer') %>

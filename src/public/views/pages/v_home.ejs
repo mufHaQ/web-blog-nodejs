@@ -1,19 +1,27 @@
 <%- include('../templates/t_header') %>
+<div class="container p-0 mt-4">
+  <form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
+</div>
+<% data.forEach(dat => { %>
 <div class="container shadow my-4 p-0 c-item rounded">
   <div class="card mb-3">
     <div class="row g-0">
-      <div class="col-md-2">
-        <img src="..." alt="...">
+      <div class="col-md-2" style="overflow: hidden; height: 200px;">
+        <img src="/assets/img/upload/<%= dat.imgName%>" alt="..." class="img-thumbnail" style="background-size: cover;">
       </div>
       <div class="col-md-10">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-            content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h5 class="card-title"><%= dat.title%></h5>
+          <p class="card-text c-text-items" style="height: 50px; overflow: hidden;"><%= dat.content%></p>
+          <p class="card-text"><small class="text-muted"><%= dat.updatedAt%></small></p>
+          <a href="/post/<%= dat.id %> " class="btn btn-primary">Details</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+<% }) %>
 <%- include('../templates/t_footer') %>
